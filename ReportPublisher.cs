@@ -27,7 +27,6 @@ namespace client
         public Task PublishReport(string reportName)
         {
             Console.WriteLine(Context.ConnectionId + " Send Message: " + reportName);
-            Console.WriteLine();
             //return Clients.Group("Chen").InvokeAsync("OnReportPublished", reportName);
             return Clients.All.InvokeAsync("OnReportPublished", reportName);
         }

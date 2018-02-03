@@ -12,7 +12,6 @@
             let hubConnection = new signalR.HubConnection(httpConnection);
 
             $("#publishReport").click(function () {
-                httpConnection.send("Hello World");
 
                 hubConnection.invoke('PublishReport', $('#reportName').val());
             });
