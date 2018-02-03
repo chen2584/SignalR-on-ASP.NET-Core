@@ -1,0 +1,29 @@
+<h2>Publisher</h2>
+
+<input type="text" id="reportName" placeholder="Enter report name" />
+<input type="button" id="publishReport" value="Publish" />
+
+@section scripts {
+    <script>
+        $(function () {
+
+            let hubUrl = '/reportsPublisher';
+            let httpConnection = new signalR.HttpConnection(hubUrl);
+            let hubConnection = new signalR.HubConnection(httpConnection);
+
+            $("#publishReport").click(function () {
+                httpConnection.send("Hello World");
+
+                hubConnection.invoke('PublishReport', $('#reportName').val());
+            });
+
+            hubConnection.on('OnReportPublished', data => {
+                
+            });
+
+            hubConnection.start();
+
+
+        });
+    </script>
+}

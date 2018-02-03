@@ -1,0 +1,21 @@
+<h2>Reports</h2>
+
+<ul id="reports"></ul>
+
+@section scripts {
+    <script>
+        $(function () {
+
+            let hubUrl = '/reportsPublisher';
+            let httpConnection = new signalR.HttpConnection(hubUrl);
+            let hubConnection = new signalR.HubConnection(httpConnection);
+            
+            hubConnection.on('OnReportPublished', data => {
+                $('#reports').append($('<li>').text(data));
+            });
+
+            hubConnection.start();
+
+        });
+    </script>
+}
