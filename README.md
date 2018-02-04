@@ -1,3 +1,4 @@
 ASP.NET Core 2.1.4 + SignalR 1.0.0-alpha1-final
 
-ปัญหาของ SignalR หลักๆ คือ ไม่สามารถ disconnect user บน hub ได้
+alpha2 สามารถ force disconnect user ได้แล้ว!
+ง่ายกว่า websocket โง่ๆ รองรับทั้ง react angular
