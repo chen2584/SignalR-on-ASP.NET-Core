@@ -1360,11 +1360,11 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Session.dll": {}
         }
       },
-      "Microsoft.AspNetCore.SignalR/1.0.0-alpha1-final": {
+      "Microsoft.AspNetCore.SignalR/1.0.0-alpha2-final": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.SignalR.Core": "1.0.0-alpha1-final",
-          "Microsoft.AspNetCore.Sockets.Http": "1.0.0-alpha1-final"
+          "Microsoft.AspNetCore.SignalR.Core": "1.0.0-alpha2-final",
+          "Microsoft.AspNetCore.Sockets.Http": "1.0.0-alpha2-final"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.dll": {}
@@ -1373,7 +1373,7 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.dll": {}
         }
       },
-      "Microsoft.AspNetCore.SignalR.Common/1.0.0-alpha1-final": {
+      "Microsoft.AspNetCore.SignalR.Common/1.0.0-alpha2-final": {
         "type": "package",
         "dependencies": {
           "MsgPack.Cli": "0.9.0-beta2",
@@ -1391,12 +1391,12 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Common.dll": {}
         }
       },
-      "Microsoft.AspNetCore.SignalR.Core/1.0.0-alpha1-final": {
+      "Microsoft.AspNetCore.SignalR.Core/1.0.0-alpha2-final": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Authorization": "2.0.0",
-          "Microsoft.AspNetCore.SignalR.Common": "1.0.0-alpha1-final",
-          "Microsoft.AspNetCore.Sockets.Abstractions": "1.0.0-alpha1-final",
+          "Microsoft.AspNetCore.SignalR.Common": "1.0.0-alpha2-final",
+          "Microsoft.AspNetCore.Sockets.Abstractions": "1.0.0-alpha2-final",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
           "Newtonsoft.Json": "10.0.1",
@@ -1409,11 +1409,11 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Core.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Sockets/1.0.0-alpha1-final": {
+      "Microsoft.AspNetCore.Sockets/1.0.0-alpha2-final": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Hosting.Abstractions": "2.0.0",
-          "Microsoft.AspNetCore.Sockets.Abstractions": "1.0.0-alpha1-final",
+          "Microsoft.AspNetCore.Sockets.Abstractions": "1.0.0-alpha2-final",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
           "System.Threading.Tasks.Channels": "0.1.0-alpha-001"
@@ -1425,7 +1425,7 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Sockets.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Sockets.Abstractions/1.0.0-alpha1-final": {
+      "Microsoft.AspNetCore.Sockets.Abstractions/1.0.0-alpha2-final": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Http.Features": "2.0.0",
@@ -1438,7 +1438,7 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Sockets.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Sockets.Common.Http/1.0.0-alpha1-final": {
+      "Microsoft.AspNetCore.Sockets.Common.Http/1.0.0-alpha2-final": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Sockets.Common.Http.dll": {}
@@ -1447,14 +1447,14 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Sockets.Common.Http.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Sockets.Http/1.0.0-alpha1-final": {
+      "Microsoft.AspNetCore.Sockets.Http/1.0.0-alpha2-final": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Authorization.Policy": "2.0.0",
           "Microsoft.AspNetCore.Hosting.Abstractions": "2.0.0",
           "Microsoft.AspNetCore.Routing": "2.0.0",
-          "Microsoft.AspNetCore.Sockets": "1.0.0-alpha1-final",
-          "Microsoft.AspNetCore.Sockets.Common.Http": "1.0.0-alpha1-final",
+          "Microsoft.AspNetCore.Sockets": "1.0.0-alpha2-final",
+          "Microsoft.AspNetCore.Sockets.Common.Http": "1.0.0-alpha2-final",
           "Microsoft.AspNetCore.WebSockets": "2.0.0",
           "Newtonsoft.Json": "10.0.1",
           "System.Memory": "4.4.0-preview2-25405-01",
@@ -5941,80 +5941,80 @@
         "microsoft.aspnetcore.session.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.SignalR/1.0.0-alpha1-final": {
-      "sha512": "dh9qOiRMdEXzQ0JbVd8WLNiy3vYhQyNVsm7/42aDeehMSpF3u+4mLgckUV3WHxz7lNMWAsysIPz/eEPTZPdyKg==",
+    "Microsoft.AspNetCore.SignalR/1.0.0-alpha2-final": {
+      "sha512": "4+v7WU6a9BDKJsIeRqceuy0K0OMW4d/ZbY3H410vVbinfuZJ4t2iRnS/fbx4+rafRsgzIn3/dTvco9XfCX0fZw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.signalr/1.0.0-alpha1-final",
+      "path": "microsoft.aspnetcore.signalr/1.0.0-alpha2-final",
       "files": [
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.xml",
-        "microsoft.aspnetcore.signalr.1.0.0-alpha1-final.nupkg.sha512",
+        "microsoft.aspnetcore.signalr.1.0.0-alpha2-final.nupkg.sha512",
         "microsoft.aspnetcore.signalr.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.SignalR.Common/1.0.0-alpha1-final": {
-      "sha512": "srFFq+9rzqiVmtsmz1jtkqGk3aFSq0s1oH2b0vdfxas2zhrAVztKkkGYrYYZUCNXqIPFp4qSBoGXhtTLf47vFg==",
+    "Microsoft.AspNetCore.SignalR.Common/1.0.0-alpha2-final": {
+      "sha512": "0lctUJWPvTlipzDxfUxa6Y3u3N0hGV32iizUcbBqrE92/RjD3NoOYRjMAEnWCJL/u8kClav+FveneBaJ9iDqPA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.signalr.common/1.0.0-alpha1-final",
+      "path": "microsoft.aspnetcore.signalr.common/1.0.0-alpha2-final",
       "files": [
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Common.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Common.xml",
-        "microsoft.aspnetcore.signalr.common.1.0.0-alpha1-final.nupkg.sha512",
+        "microsoft.aspnetcore.signalr.common.1.0.0-alpha2-final.nupkg.sha512",
         "microsoft.aspnetcore.signalr.common.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.SignalR.Core/1.0.0-alpha1-final": {
-      "sha512": "EGQZzHyA4IHQNDBPKiaU7l32c9tm0OX+85Gkx5zlkqTBNmTakjKz8TMrE9zYgehU+SFhvq0t6X4cWtk5yN1AeA==",
+    "Microsoft.AspNetCore.SignalR.Core/1.0.0-alpha2-final": {
+      "sha512": "drz22GLAxsJSZZuh7VyA7KYqvbMRnWkjgV66bBQV6o2358JBMveozfiYZ/mkR/mNdgHQegelyillfBtKEzoa5w==",
       "type": "package",
-      "path": "microsoft.aspnetcore.signalr.core/1.0.0-alpha1-final",
+      "path": "microsoft.aspnetcore.signalr.core/1.0.0-alpha2-final",
       "files": [
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Core.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Core.xml",
-        "microsoft.aspnetcore.signalr.core.1.0.0-alpha1-final.nupkg.sha512",
+        "microsoft.aspnetcore.signalr.core.1.0.0-alpha2-final.nupkg.sha512",
         "microsoft.aspnetcore.signalr.core.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Sockets/1.0.0-alpha1-final": {
-      "sha512": "67Oskn3MuJivRStibm2REl380/LYugSobUTJTOLmsrQN2owK9QC9O69H5EjkTyAZRFC7E0vrNSAl6qil/Hv6mQ==",
+    "Microsoft.AspNetCore.Sockets/1.0.0-alpha2-final": {
+      "sha512": "ZKOgeSIPCrVZWBie0q8ac2k6yZ38L3ertY1EDpWKeWRACR+b/dTQSRnoWjnI7EbrUokPpqFp6gHVd76pFWBuAg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.sockets/1.0.0-alpha1-final",
+      "path": "microsoft.aspnetcore.sockets/1.0.0-alpha2-final",
       "files": [
         "lib/netstandard2.0/Microsoft.AspNetCore.Sockets.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Sockets.xml",
-        "microsoft.aspnetcore.sockets.1.0.0-alpha1-final.nupkg.sha512",
+        "microsoft.aspnetcore.sockets.1.0.0-alpha2-final.nupkg.sha512",
         "microsoft.aspnetcore.sockets.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Sockets.Abstractions/1.0.0-alpha1-final": {
-      "sha512": "FX1sjfvBgq3SNO6Nfe4dp/i3cPSDQxo8dOtk/sNuP40eqQ1jGoo+iDDWQ9xipCjsdIWsMoPlyCUfbsMykGg7fQ==",
+    "Microsoft.AspNetCore.Sockets.Abstractions/1.0.0-alpha2-final": {
+      "sha512": "X+Y6CGYtyBU3/LYgtjT92PQGNtSceyzLI3Hatm+3Zd1xBqtjS8KjsvDz2I+WfNWJfeNJOwcDx3BtWwrjSj2sFA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.sockets.abstractions/1.0.0-alpha1-final",
+      "path": "microsoft.aspnetcore.sockets.abstractions/1.0.0-alpha2-final",
       "files": [
         "lib/netstandard2.0/Microsoft.AspNetCore.Sockets.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Sockets.Abstractions.xml",
-        "microsoft.aspnetcore.sockets.abstractions.1.0.0-alpha1-final.nupkg.sha512",
+        "microsoft.aspnetcore.sockets.abstractions.1.0.0-alpha2-final.nupkg.sha512",
         "microsoft.aspnetcore.sockets.abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Sockets.Common.Http/1.0.0-alpha1-final": {
-      "sha512": "bKHQho53rWX9cGgpcYeJauj6AUJ7hwzylnlhGcVffrCa7fRuNyI+zsbm70mPYz8cemAuymC4y/WoQ3XgMDM9xg==",
+    "Microsoft.AspNetCore.Sockets.Common.Http/1.0.0-alpha2-final": {
+      "sha512": "ytEp0CgL9djatkSBqVv+8D+jMQvTPBgMArTCk4v3cHvvYY8x4jQd559hEhNs+R/DTztUT7b76RdttPYebSy0AA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.sockets.common.http/1.0.0-alpha1-final",
+      "path": "microsoft.aspnetcore.sockets.common.http/1.0.0-alpha2-final",
       "files": [
         "lib/netstandard2.0/Microsoft.AspNetCore.Sockets.Common.Http.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Sockets.Common.Http.xml",
-        "microsoft.aspnetcore.sockets.common.http.1.0.0-alpha1-final.nupkg.sha512",
+        "microsoft.aspnetcore.sockets.common.http.1.0.0-alpha2-final.nupkg.sha512",
         "microsoft.aspnetcore.sockets.common.http.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Sockets.Http/1.0.0-alpha1-final": {
-      "sha512": "oIQVGuQ88+wCAxEMJGVryq+1fwc7RsDcqqAo98707xtO7a/IXcJeaLl2vCA6g42RKoRm6utqTbnjaUNa2d4nYA==",
+    "Microsoft.AspNetCore.Sockets.Http/1.0.0-alpha2-final": {
+      "sha512": "x5dgMvw18mvj4Lbz+niLVjBalxnEpSFDo61LXNOEWvD/yiAa4BKN7tWxk2Jr6ycEO60hAwAvvoFc1b071cRTRA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.sockets.http/1.0.0-alpha1-final",
+      "path": "microsoft.aspnetcore.sockets.http/1.0.0-alpha2-final",
       "files": [
         "lib/netstandard2.0/Microsoft.AspNetCore.Sockets.Http.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Sockets.Http.xml",
-        "microsoft.aspnetcore.sockets.http.1.0.0-alpha1-final.nupkg.sha512",
+        "microsoft.aspnetcore.sockets.http.1.0.0-alpha2-final.nupkg.sha512",
         "microsoft.aspnetcore.sockets.http.nuspec"
       ]
     },
@@ -12969,7 +12969,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.AspNetCore.All >= 2.0.5",
-      "Microsoft.AspNetCore.SignalR >= 1.0.0-alpha1-final",
+      "Microsoft.AspNetCore.SignalR >= 1.0.0-alpha2-final",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
   },
@@ -13018,7 +13018,7 @@
           },
           "Microsoft.AspNetCore.SignalR": {
             "target": "Package",
-            "version": "[1.0.0-alpha1-final, )"
+            "version": "[1.0.0-alpha2-final, )"
           },
           "Microsoft.NETCore.App": {
             "target": "Package",

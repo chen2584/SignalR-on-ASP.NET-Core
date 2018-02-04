@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SignalR;
 
 namespace client
@@ -9,8 +10,12 @@ namespace client
     {
         //private static ConcurrentDictionary<string, string> connectingUser = new ConcurrentDictionary<string, string>();
         private static List<string> connectingUser = new List<string>();
+
         public override Task OnConnectedAsync()
         {
+            //HttpContext httpContext = Context.Connection.GetHttpContext();
+            //Context.Connection.Abort();
+
             connectingUser.Add(Context.ConnectionId);
             Console.WriteLine(Context.ConnectionId + " is connected");
             //AddGroup("Chen");
