@@ -29,7 +29,7 @@ namespace client
             string ConnectionId = Context.ConnectionId; 
             connectingUser.Remove(ConnectionId);
 
-            int contextIndex = hubct.FindIndex(x => x.ConnectionId.Equals(Context.ConnectionId));
+            int contextIndex = hubct.FindIndex(x => x.ConnectionId == Context.ConnectionId);
             hubct.Remove(hubct[contextIndex]);
 
             Console.WriteLine(Context.ConnectionId + " is disconnected >> " + ConnectionId + 
@@ -46,7 +46,7 @@ namespace client
         public Task ForceDisconnectUser(string connectionId)
         {
             //ควรใช้ concurrentdictionary แทน list เพือ่ความปลอดภัย
-            int contextIndex = hubct.FindIndex(x => x.ConnectionId.Equals(connectionId));
+            int contextIndex = hubct.FindIndex(x => x.ConnectionId == connectionId);
             hubct[contextIndex].Connection.Abort();
             return Clients.Client(Context.ConnectionId).InvokeAsync("OnReportPublished", connectionId + "ลบแล้ว");
         }
