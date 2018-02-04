@@ -25,7 +25,7 @@
                 hubConnection.invoke('ForceDisconnectUser', $('#deleteID').val());
             });
 
-            hubConnection.on('OnReportPublished', data => {
+            hubConnection.on('OnReportPublished', function(data) {
                 alert(data);
             });
 

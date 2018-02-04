@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SignalR;
@@ -28,9 +29,7 @@ namespace client
         {
             string ConnectionId = Context.ConnectionId; 
             connectingUser.Remove(ConnectionId);
-
-            int contextIndex = hubct.FindIndex(x => x.ConnectionId == Context.ConnectionId);
-            hubct.Remove(hubct[contextIndex]);
+            var contextIndex = hubct.RemoveAll(x => x.ConnectionId == Context.ConnectionId);            
 
             Console.WriteLine(Context.ConnectionId + " is disconnected >> " + ConnectionId + 
                 " Remain: " + connectingUser.Count + " HubRemain: " + hubct.Count);
@@ -46,9 +45,9 @@ namespace client
         public Task ForceDisconnectUser(string connectionId)
         {
             //ควรใช้ concurrentdictionary แทน list เพือ่ความปลอดภัย
-            int contextIndex = hubct.FindIndex(x => x.ConnectionId == connectionId);
-            hubct[contextIndex].Connection.Abort();
-            return Clients.Client(Context.ConnectionId).InvokeAsync("OnReportPublished", connectionId + "ลบแล้ว");
+            var contextInfo = hubct.FirstOrDefault(x => x.ConnectionId == connectionId);
+            contextInfo.Connection.Abort();
+            return Clients.Client(Context.ConnectionId).InvokeAsync("OnReportPublished", connectionId + " ลบแล้ว");
         }
 
         public Task AddGroup(string groupName)
