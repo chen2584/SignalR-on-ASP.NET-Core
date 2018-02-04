@@ -10,11 +10,13 @@ namespace client
     {
         //private static ConcurrentDictionary<string, string> connectingUser = new ConcurrentDictionary<string, string>();
         private static List<string> connectingUser = new List<string>();
+        private static List<HubCallerContext> hubct = new List<HubCallerContext>();
 
         public override Task OnConnectedAsync()
         {
             //HttpContext httpContext = Context.Connection.GetHttpContext();
             //Context.Connection.Abort();
+            hubct.Add(Context);
 
             connectingUser.Add(Context.ConnectionId);
             Console.WriteLine(Context.ConnectionId + " is connected");
@@ -26,7 +28,12 @@ namespace client
         {
             string ConnectionId = Context.ConnectionId; 
             connectingUser.Remove(ConnectionId);
-            Console.WriteLine(Context.ConnectionId + " is disconnected >> " + ConnectionId + " Remain: " + connectingUser.Count);
+
+            int contextIndex = hubct.FindIndex(x => x.ConnectionId.Equals(Context.ConnectionId));
+            hubct.Remove(hubct[contextIndex]);
+
+            Console.WriteLine(Context.ConnectionId + " is disconnected >> " + ConnectionId + 
+                " Remain: " + connectingUser.Count + " HubRemain: " + hubct.Count);
             return base.OnDisconnectedAsync(ex);
         }
         public Task PublishReport(string reportName)
@@ -34,6 +41,14 @@ namespace client
             Console.WriteLine(Context.ConnectionId + " Send Message: " + reportName);
             //return Clients.Group("Chen").InvokeAsync("OnReportPublished", reportName);
             return Clients.All.InvokeAsync("OnReportPublished", reportName);
+        }
+
+        public Task ForceDisconnectUser(string connectionId)
+        {
+            //ควรใช้ concurrentdictionary แทน list เพือ่ความปลอดภัย
+            int contextIndex = hubct.FindIndex(x => x.ConnectionId.Equals(connectionId));
+            hubct[contextIndex].Connection.Abort();
+            return Clients.Client(Context.ConnectionId).InvokeAsync("OnReportPublished", connectionId + "ลบแล้ว");
         }
 
         public Task AddGroup(string groupName)

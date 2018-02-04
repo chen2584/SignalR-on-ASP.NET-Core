@@ -3,6 +3,10 @@
 <input type="text" id="reportName" placeholder="Enter report name" />
 <input type="button" id="publishReport" value="Publish" />
 
+<br/><br/>
+<input type="text" id="deleteID" placeholder="Enter Connection" />
+<input type="button" id="deleteConnection" value="Delete" />
+
 @section scripts {
     <script>
         $(function () {
@@ -16,8 +20,13 @@
                 hubConnection.invoke('PublishReport', $('#reportName').val());
             });
 
+            $("#deleteConnection").click(function () {
+
+                hubConnection.invoke('ForceDisconnectUser', $('#deleteID').val());
+            });
+
             hubConnection.on('OnReportPublished', data => {
-                
+                alert(data);
             });
 
             hubConnection.start();
